@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function fetchCities() {
   try {
     const response = await fetch(
-      "https://api-turismo.vercel.app/api/destinations"
+      "https://api-guia-de-turismo.vercel.app/api/destinations"
     );
     const cities = await response.json();
     displayCities(cities);
@@ -56,7 +56,7 @@ function populateCarousel(cities) {
 async function fetchAttractions(cityId) {
   try {
     const response = await fetch(
-      `https://api-turismo.vercel.app/api/attractions?destination_id=${cityId}`
+      `https://api-guia-de-turismo.vercel.app/api/attractions?destination_id=${cityId}`
     );
     const attractions = await response.json();
     displayAttractions(attractions);
